@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <link href="<c:url value="/main.css"/>" rel="stylesheet" type="text/css"/>
-  <title>Demo</title>
+  <title>Cacoo Demo</title>
 </head>
 <body>
 <div id="container">
@@ -24,7 +24,7 @@
       And since this site uses <a href="http://oauth.net">OAuth</a> to access your photos, we will never ask you
       for your Sparklr credentials.</p>
 
-    <p>Tonr.com has only one user: "dipika" . The password for "dipika" is password is "cacoo" </p>
+    <p>cacoo Demo has only one user: "dipika" . The password for "dipika" is password is "cacoo" </p>
 
     <authz:authorize ifNotGranted="ROLE_USER">
       <p><a href="<c:url value="login.jsp"/>">Login </a></p>
