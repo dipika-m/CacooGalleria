@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <link href="<c:url value="/main.css"/>" rel="stylesheet" type="text/css"/>
-  <title>tonr</title>
+  <title>cacoo Demo</title>
 </head>
 <body>
 <div id="container">
