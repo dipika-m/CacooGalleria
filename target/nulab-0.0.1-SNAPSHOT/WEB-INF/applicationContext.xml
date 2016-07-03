@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:oauth="http://www.springframework.org/schema/security/oauth"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+              http://www.springframework.org/schema/security/oauth http://www.springframework.org/schema/security/spring-security-oauth-1.0.xsd">
+
+  <beans:bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <beans:property name="location" value="/WEB-INF/cacoo.properties"/>
+  </beans:bean>
+
+  <http auto-config='true' access-denied-page="/login.jsp">
+    <intercept-url pattern="/cacoo/**" access="ROLE_USER" />
+    <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+    <form-login authentication-failure-url="/login.jsp" default-target-url="/index.jsp" login-page="/login.jsp" login-processing-url="/login.do"/>
+    <logout logout-success-url="/index.jsp" logout-url="/logout.do"/>
+  </http>
+
+  <authentication-manager>
+    <authentication-provider>
+      <user-service>
+        <user name="dipika" password="cacoo" authorities="ROLE_USER" />
+      </user-service>
+    </authentication-provider>
+  </authentication-manager>
+
+  <oauth:consumer resource-details-service-ref="resourceDetails" oauth-failure-page="/oauth_error.jsp">
+    <oauth:url pattern="/cacoo/**" resources="cacooDiagrams"/>
+    <oauth:url pattern="/login/**" resources="none"/>
+  </oauth:consumer>
+
+  <oauth:resource-details-service id="resourceDetails">
+    <oauth:resource id="cacooDiagrams"
+                    key="LsubZZBeTXbvDzXanIHbcg"
+                    secret="wONDGhsQJcQsKNNNwJQgpTpVFaMjCRYrcAbdACGGaq"
+                    request-token-url="https://cacoo.com/oauth/request_token"
+                    user-authorization-url="https://cacoo.com/oauth/authorize"
+                    access-token-url="https://cacoo.com/oauth/access_token"/>
+    
+  </oauth:resource-details-service>
+
+</beans:beans>
