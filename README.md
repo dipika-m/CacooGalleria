@@ -1,5 +1,5 @@
-# cacooApi-spring-oAuth1.a
-These are the Spring Security OAuth (1a) sample apps 
+# CacooGalleria
+Spring Security OAuth (1a) application
 
 This app consumes  external resources (e.g. Cacoo), and the precise external resource it consumes has
 been chosen to show the use of the relevant protocol.
