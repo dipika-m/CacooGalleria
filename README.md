@@ -4,9 +4,9 @@ Spring Security OAuth (1a) application
 This app consumes  external resources (e.g. Cacoo), and the precise external resource it consumes has
 been chosen to show the use of the relevant protocol.
 
-The `Cacoo` app is a online diagram management You can create online diagram with real time collaboration.
-`Cacoo` is the easiest way to create shareable diagrams online but it doesn't know what you have to do with your diagrams ? . 
-Thats where `consumer` comes in i.e `cacooApi` created using `spring` . 
+The `Cacoo` app is a online diagram management. You can create online diagram with real time collaboration.
+`Cacoo` is the easiest way to create shareable diagrams online but it doesn't know what you have to do with your diagrams ? 
+Thats where `CacooGalleria` comes in. 
 
 You go to `CacooGalleria` to browse the photos that are stored in `cacoo` and
 "print" them (this feature is not actually implemented).  
