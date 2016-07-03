@@ -24,7 +24,7 @@ Visit `http://localhost:8080/nulab` in a browser and go to the
 * You are prompted to authenticate with `CacooGalleria` (the login screen tells
   you the users available and their passwords)
 
-  ![alt text](https://github.com/dipikam86/CacooGalleria/tree/master/images/cacooLogin.png "cacooLogin")
+  ![alt text](https://github.com/dipikam86/CacooGalleria/blob/master/images/cacooLogin.png "cacooLogin")
   
 * The correct authorization is not yet in place for `CacooGalleria` to access
   your photos on `cacoo` on your behalf, so `CacooGalleria` redirects your
@@ -32,17 +32,17 @@ Visit `http://localhost:8080/nulab` in a browser and go to the
 
 * You are prompted to authenticate with `Cacoo`.
 
-![alt text](https://github.com/dipikam86/CacooGalleria/tree/master/images/cacooSignIn.png "cacooSignIn")
+![alt text](https://github.com/dipikam86/CacooGalleria/blob/master/images/cacooSignIn.png "cacooSignIn")
 
 * Then `Cacoo` will ask you if you authorize `CacooGalleria` to access your
   photos.
-![alt text](https://github.com/dipikam86/CacooGalleria/tree/master/images/cacooAuth.png "cacooAuth")  
+![alt text](https://github.com/dipikam86/CacooGalleria/blob/master/images/cacooAuth.png "cacooAuth")  
 
 * If you say "yes" then your browser will be redirected back to `CacooGalleria`
   and this time the correct authorization is present, so you will be
   able to see your photos.
   
-![alt text](https://github.com/dipikam86/CacooGalleria/tree/master/images/cacooDiagram.png "cacooDiagram")
+![alt text](https://github.com/dipikam86/CacooGalleria/blob/master/images/cacooDiagram.png "cacooDiagram")
 ## How to build the WAR files
 
 Use Maven (2.2.1 works) and, from this directory do 
@@ -60,6 +60,5 @@ the command line before importing the samples (using `mvn install`).
 
         File->Import...->Maven->Existing Maven Projects->Next
 
-  browse to the parent directory containing all the
-  samples and press `Finish`.
+  `Finish`.
   
